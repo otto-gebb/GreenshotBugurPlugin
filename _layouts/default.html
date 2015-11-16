@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+
+   <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>{{ site.title }}</h1>
+          <p>Uploads images to Bugur</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/otto-gebb">otto-gebb</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+        </div>
+        {{ content }}
+      </section>
+   </div>
+
+    {% include footer.html %}
+   <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+  </body>
+
+</html>
