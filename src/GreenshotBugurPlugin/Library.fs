@@ -60,8 +60,13 @@ type BugurDestination(config : BugurConfig) =
   inherit AbstractDestination()
   let log : log4net.ILog = log4net.LogManager.GetLogger(typedefof<BugurDestination>)
   let connector = BugurConnector(config.Url, config.TimeOut)
+  let loadIcon () =
+    let assembly = System.Reflection.Assembly.GetExecutingAssembly()
+    use stream = assembly.GetManifestResourceStream "icon.ico"
+    System.Drawing.Image.FromStream(stream)
   override x.Designation = "Bugur"
   override x.Description = "Upload to Bugur"
+  override x.DisplayIcon = loadIcon()
   override x.ExportCapture(manuallyInitiated, surface, captureDetails) =
     let exportInfo = ExportInformation(x.Designation, x.Description)
     let outputSettings = SurfaceOutputSettings(OutputFormat.png, 80, false)
