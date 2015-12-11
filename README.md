@@ -27,6 +27,7 @@ When the build succeeds, the plugin file can be found at `bin\GreenshotBugurPlug
 * Replace the Url parameter with the correct URL of your Bugur instance.
 * You're done. Start Greenshot and upload images to Bugur.
 
-Documentation: Coming soon
+## Releasing
+See http://fsprojects.github.io/ProjectScaffold/release-process.html
 
 
